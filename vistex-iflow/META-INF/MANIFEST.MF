@@ -1,0 +1,77 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: Claims_Vistex_Demo1
+Bundle-ManifestVersion: 2
+Origin-Bundle-SymbolicName: Claims_Vistex_Demo1
+Import-Package:  com.sap.esb.camel.core.quartz, com.sap.esb.camel.ftp.
+ sap.sftp.component, com.sap.it.nm.security, com.sap.it.rt.scc.connect
+ ivity, com.sap.esb.camel.ftp.proxy; resolution:="optional", com.sap.e
+ sb.camel.ftp.file.filter.glob, com.sap.it.rt.adapter.http.component, 
+ com.sap.it.rt.csvtoxml.converter, org.apache.camel.component.xslt, co
+ m.sap.it.iflow.saxonee, net.sf.saxon.lib, com.sap.it.api.mapping, com
+ .sap.aii.mapping.value.api, com.sap.aii.mapping.lookup, com.sap.aii.m
+ appingtool.tfapi, com.sap.aii.mappingtool.tf7.rt, com.sap.aii.mapping
+ tool.tf7, com.sap.aii.mappingtool.tf3.rt, com.sap.aii.mappingtool.tf3
+ , com.sap.aii.mappingtool.flib7, com.sap.aii.mappingtool.flib3, com.s
+ ap.aii.mapping.api, com.sap.aii.ib.bom.flib.types, com.sap.esb.datast
+ ore.wrapper, com.sap.esb.monitoring.cxf.response.log, com.sap.esb.mon
+ itoring.cxf.runtime.feature, com.sap.it.op.agent.trace.cxf, com.sap.e
+ sb.size.limiter, com.sap.esb.camel.webservice.endpoint.configurer, co
+ m.sap.esb.webservice.security.crypto.api, com.sap.esb.webservice.poli
+ cy.alternative.selector, org.apache.cxf.ws.security.wss4j, org.apache
+ .wss4j.common.crypto, javax.security.auth.callback, com.sap.it.iflow.
+ model.runtime, com.sap.it.iflow.model, com.sap.sod.utils.idoc.soap.in
+ terceptors, com.sap.sod.utils.idoc.soap.processors, com.sap.sod.utils
+ .idoc.soap, com.sap.sod.utils.soap.processors, com.sap.sod.utils.soap
+ , com.sap.sod.utils.encoding.processors, com.sap.sod.utils.cxf.interc
+ eptors, com.sap.it.rt.scc.proxy, com.sap.esb.camel.jdbc.inprogress.re
+ pository, com.sap.esb.camel.jdbc.idempotency.repository, com.sap.esb.
+ camel.webservice.cxfbinding, com.sap.esb.camel.mpl.access, com.sap.es
+ b.camel.eip.splitter, com.sap.esb.camel.xmljson, com.sap.it.op.ed, co
+ m.sap.it.op.agent.ed.plugins.camel.api, com.sap.esb.webservice.author
+ ization.supplier.api, org.apache.cxf.interceptor.security, net.sf.sax
+ on.xpath, net.sf.saxon,com.sap.esb.application.services.cxf.intercept
+ or,com.sap.esb.security,com.sap.it.op.agent.api,com.sap.it.op.agent.c
+ ollector.camel,com.sap.it.op.agent.collector.cxf,com.sap.it.op.agent.
+ mpl,javax.jms,javax.jws,javax.wsdl,javax.xml.bind.annotation,javax.xm
+ l.namespace,javax.xml.ws,org.apache.camel;version="2.8",org.apache.ca
+ mel.builder;version="2.8",org.apache.camel.builder.xml;version="2.8",
+ org.apache.camel.component.cxf,org.apache.camel.model;version="2.8",o
+ rg.apache.camel.processor;version="2.8",org.apache.camel.processor.ag
+ gregate;version="2.8",org.apache.camel.spring.spi;version="2.8",org.a
+ pache.commons.logging,org.apache.cxf.binding,org.apache.cxf.binding.s
+ oap,org.apache.cxf.binding.soap.spring,org.apache.cxf.bus,org.apache.
+ cxf.bus.resource,org.apache.cxf.bus.spring,org.apache.cxf.buslifecycl
+ e,org.apache.cxf.catalog,org.apache.cxf.configuration.jsse;version="2
+ .5",org.apache.cxf.configuration.spring,org.apache.cxf.endpoint,org.a
+ pache.cxf.headers,org.apache.cxf.interceptor,org.apache.cxf.managemen
+ t.counters;version="2.5",org.apache.cxf.message,org.apache.cxf.phase,
+ org.apache.cxf.resource,org.apache.cxf.service.factory,org.apache.cxf
+ .service.model,org.apache.cxf.transport,org.apache.cxf.transport.comm
+ on.gzip,org.apache.cxf.transport.http,org.apache.cxf.transport.http.p
+ olicy,org.apache.cxf.workqueue,org.apache.cxf.ws.rm.persistence,org.a
+ pache.cxf.wsdl11,org.osgi.framework;version="1.6.0",org.slf4j;version
+ ="1.6",org.springframework.beans.factory.config;version="3.0",com.sap
+ .esb.camel.security.cms,org.apache.camel.spi,com.sap.esb.webservice.a
+ udit.log,com.sap.esb.camel.endpoint.configurator.api,com.sap.esb.came
+ l.jdbc.idempotency.reorg,javax.sql,org.apache.camel.processor.idempot
+ ent.jdbc,org.osgi.service.blueprint;version="[1.0.0,2.0.0)"
+Require-Capability: sap-HTTPS;resolution:=optional,sap-SFTP;resolution
+ :=optional
+Origin-Bundle-Name: Claims_Vistex_Demo1
+SAP-RuntimeProfile: iflmap
+WorkspaceProfile: iflmap
+Bundle-Name: Claims_Vistex_Demo1
+Bundle-Version: 1.0.5
+Bundle-ClassPath: .,/mapping/MM_CP_CLAIM_To_CHGBACKS01.jar
+SAP-StartOrder: 150
+SAP-NodeType: IFLMAP
+SAP-BundleType: IntegrationFlow
+Import-Service:  javax.sql.DataSource;multiple:=false;filter="(name=wr
+ apper)", com.sap.esb.camel.endpoint.configurator.api.EndpointConfigur
+ ator;multiple:=false;filter="(endpointType=SFTP)",com.sap.esb.webserv
+ ice.audit.log.AuditLogger,com.sap.esb.security.KeyManagerFactory;mult
+ iple:=false,com.sap.esb.security.TrustManagerFactory;multiple:=false,
+ javax.sql.DataSource;multiple:=false;filter="(dataSourceName=default)
+ ",org.apache.cxf.ws.rm.persistence.RMStore;multiple:=false,com.sap.es
+ b.camel.security.cms.SignatureSplitter;multiple:=false
+

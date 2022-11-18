@@ -1,0 +1,13 @@
+steps:
+  integrationArtifactDeploy:
+    cpiApiServiceKeyCredentialsId: teched-eu02
+    integrationFlowId: vistex-iflow
+  integrationArtifactGetMplStatus:
+    cpiApiServiceKeyCredentialsId: teched-eu02
+    integrationFlowId: vistex-iflow
+  integrationArtifactUpload:
+    cpiApiServiceKeyCredentialsId: teched-eu02
+    integrationFlowId: vistex-iflow
+    integrationFlowName: vistex-iflow
+    packageId: CICD
+    filePath: vistex-iflow.zip
